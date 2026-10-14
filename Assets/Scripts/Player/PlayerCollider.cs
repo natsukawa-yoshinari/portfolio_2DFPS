@@ -24,7 +24,7 @@ public class PlayerCollider : MonoBehaviour
 
     public Transform GetPlayerTransform()
     {
-        return _player.transform;
+        return _player != null ? _player.transform : this.transform;
     }
 
     public void AddDamage(float damage)
@@ -36,7 +36,7 @@ public class PlayerCollider : MonoBehaviour
     {
         Gizmos.color = Color.white;
 
-        Vector3 centerPos = _player.transform.position + _offset;
+        Vector3 centerPos = (_player != null ? _player.transform.position : this.transform.position) + _offset;
 
         Gizmos.DrawWireSphere(centerPos, _radius);
     }

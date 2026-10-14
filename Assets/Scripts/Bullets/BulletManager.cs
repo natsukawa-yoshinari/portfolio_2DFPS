@@ -6,13 +6,13 @@ public class BulletManager : MonoBehaviour
     [SerializeField]
     private PlayerCollider _playerCollider;
     [SerializeField]
-    private TrianglePool _triangleBulletPool;
+    private GameObject _triangleBulletPrefab;
     [SerializeField]
-    private MotherCirclePool _motherCircleBulletPool;
+    private GameObject _motherCircleBulletPrefab;
     [SerializeField]
-    private CirclePool _circleBulletPool;
+    private GameObject _circleBulletPrefab;
     [SerializeField]
-    private StarPool _starBulletPool;
+    private GameObject _starBulletPrefab;
 
     private GameObject _enemy;
 
@@ -21,45 +21,54 @@ public class BulletManager : MonoBehaviour
         _enemy = enemy;
     }
 
-    // 弾の生成
     public void GenerateBulletTriangle()
     {
-        PooledObject obj = _triangleBulletPool.GetPooledObject();
+        if (_enemy == null || _triangleBulletPrefab == null) return;
 
-        if (obj == null) return;
-        obj.transform.position = _enemy.transform.position;
+        GameObject obj = Instantiate(_triangleBulletPrefab, _enemy.transform.position, Quaternion.identity);
 
         BulletTriangle bullet = obj.GetComponent<BulletTriangle>();
-        bullet.Initialize(_playerCollider);
+        if (bullet != null)
+        {
+            bullet.Initialize(_playerCollider);
+        }
     }
 
     public void GenerateBulletMotherCircle()
     {
-        PooledObject obj = _motherCircleBulletPool.GetPooledObject();
+        if (_enemy == null || _motherCircleBulletPrefab == null) return;
 
-        if (obj == null) return;
-        obj.transform.position = _enemy.transform.position;
+        GameObject obj = Instantiate(_motherCircleBulletPrefab, _enemy.transform.position, Quaternion.identity);
 
         BulletMotherCircle bullet = obj.GetComponent<BulletMotherCircle>();
-        bullet.Initialize(_playerCollider, _circleBulletPool);
+        if (bullet != null)
+        {
+            bullet.Initialize(_playerCollider, _circleBulletPrefab);
+        }
     }
 
     public void GenerateBulletStar()
     {
-        PooledObject obj = _starBulletPool.GetPooledObject();
+        if (_enemy == null || _starBulletPrefab == null) return;
 
-        if (obj == null) return;
-        obj.transform.position = _enemy.transform.position;
+        GameObject obj = Instantiate(_starBulletPrefab, _enemy.transform.position, Quaternion.identity);
 
         BulletStar bullet = obj.GetComponent<BulletStar>();
-        bullet.Initialize(_playerCollider);
+        if (bullet != null)
+        {
+            bullet.Initialize(_playerCollider);
+        }
     }
 
     public void ClearAllPool()
     {
-        _triangleBulletPool.ClearAllPoolObjects();
-        _motherCircleBulletPool.ClearAllPoolObjects();
-        _circleBulletPool.ClearAllPoolObjects();
-        _starBulletPool.ClearAllPoolObjects();
+        BulletBase[] activeBullets = FindObjectsByType<BulletBase>(FindObjectsSortMode.None);
+        for (int i = 0; i < activeBullets.Length; i++)
+        {
+            if (activeBullets[i] != null)
+            {
+                Destroy(activeBullets[i].gameObject);
+            }
+        }
     }
 }

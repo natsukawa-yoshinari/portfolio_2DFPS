@@ -119,52 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &162034318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 162034319}
-  - component: {fileID: 162034320}
-  m_Layer: 0
-  m_Name: Triangle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &162034319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162034318}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600039971}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &162034320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162034318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46861d43b9bff74ba72dccd0d0947e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrianglePool
-  _initPoolSize: 10
-  _pooledObject: {fileID: 3068232502271680340, guid: c694eb091dfe22e4c9e5bc347509918c, type: 3}
 --- !u!1 &455739588
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,52 +944,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &717587819
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 717587820}
-  - component: {fileID: 717587821}
-  m_Layer: 0
-  m_Name: CircleMother
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &717587820
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717587819}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600039971}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &717587821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717587819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56516192753884447a075a0a6475f68f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MotherCirclePool
-  _initPoolSize: 5
-  _pooledObject: {fileID: 3260537699642803824, guid: be75573611641d44bbefec5eb719422f, type: 3}
 --- !u!1 &749721611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,41 +1982,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1574850260}
   m_CullTransparentMesh: 1
---- !u!1 &1600039968
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1600039971}
-  m_Layer: 0
-  m_Name: BulletPools
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1600039971
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600039968}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 162034319}
-  - {fileID: 717587820}
-  - {fileID: 2041328032}
-  - {fileID: 1924463277}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1657162417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,10 +2092,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletManager
   _playerCollider: {fileID: 1657162418}
-  _triangleBulletPool: {fileID: 162034320}
-  _motherCircleBulletPool: {fileID: 717587821}
-  _circleBulletPool: {fileID: 2041328033}
-  _starBulletPool: {fileID: 1924463278}
+  _triangleBulletPrefab: {fileID: 2400169743854868464, guid: c694eb091dfe22e4c9e5bc347509918c, type: 3}
+  _motherCircleBulletPrefab: {fileID: 8451184676202577238, guid: be75573611641d44bbefec5eb719422f, type: 3}
+  _circleBulletPrefab: {fileID: 1439310189863144563, guid: 59a47d2cbf9a3254ea01cc2b20d4548d, type: 3}
+  _starBulletPrefab: {fileID: 8737495472543148951, guid: c23ab0f162a2fcf40824b2dabab7dd91, type: 3}
 --- !u!4 &1685630059
 Transform:
   m_ObjectHideFlags: 0
@@ -2248,6 +2121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1848865096}
   - component: {fileID: 1848865095}
+  - component: {fileID: 1848865097}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2331,52 +2205,42 @@ Transform:
   - {fileID: 1155151583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1924463276
-GameObject:
+--- !u!58 &1848865097
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1924463277}
-  - component: {fileID: 1924463278}
-  m_Layer: 0
-  m_Name: Star
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1924463277
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924463276}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600039971}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924463278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924463276}
+  m_GameObject: {fileID: 1848865093}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d20d39c3153fae4dba2d0fddb17235b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StarPool
-  _initPoolSize: 30
-  _pooledObject: {fileID: 699077501968929467, guid: c23ab0f162a2fcf40824b2dabab7dd91, type: 3}
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &1952634495
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,52 +2391,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040132848}
   m_CullTransparentMesh: 1
---- !u!1 &2041328031
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2041328032}
-  - component: {fileID: 2041328033}
-  m_Layer: 0
-  m_Name: Circle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2041328032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041328031}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1600039971}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2041328033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041328031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65643b3132258a143a9d10c69efc1cc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CirclePool
-  _initPoolSize: 50
-  _pooledObject: {fileID: 4969388560538814356, guid: 59a47d2cbf9a3254ea01cc2b20d4548d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2586,4 +2404,3 @@ SceneRoots:
   - {fileID: 1685630059}
   - {fileID: 683629726}
   - {fileID: 1333826710}
-  - {fileID: 1600039971}
